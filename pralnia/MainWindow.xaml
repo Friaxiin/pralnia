@@ -1,0 +1,47 @@
+﻿<Window x:Class="pralnia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pralnia"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="AliceBlue">
+    <StackPanel>
+        <TextBlock Text="Pralnia" FontSize="30" TextAlignment="Center" FontWeight="Bold" Foreground="DarkBlue"/>
+
+        <StackPanel Orientation="Horizontal" Height="400">
+            <StackPanel Width="400">
+                <GroupBox BorderBrush="DarkBlue" BorderThickness="2" Foreground="DarkBlue" FontWeight="Bold">
+                    <GroupBox.Header>Rodzaj usługi</GroupBox.Header>
+                    <StackPanel>
+                        <RadioButton Content="Pranie" Foreground="DarkBlue" Margin="10" GroupName="usluga" x:Name="pranie"/>
+                        <RadioButton Content="Suszenie" Foreground="DarkBlue" Margin="10" GroupName="usluga" x:Name="suszenie"/>
+                        <RadioButton Content="Pranie i suszenie" Foreground="DarkBlue" Margin="10" GroupName="usluga" x:Name="pranieSuszenie"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <CheckBox Content="Jestem stałym klientem" Foreground="DarkBlue" x:Name="stalyKlient" Margin="10, 40, 0, 0"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0, 50, 0, 0">
+                    <Label Content="Cena: " Margin="10, 0, 0, 0" FontWeight="Bold" FontSize="20" Foreground="DarkBlue" VerticalAlignment="Center"/>
+                    <Label Content="" FontWeight="Bold" FontSize="20" Foreground="DarkBlue" x:Name="cenaLbl" VerticalAlignment="Center"/>
+
+                    <Button Content="Sprawdź cenę" Click="SprawdzCene" Margin="10, 10, 10, 10" Foreground="White" FontSize="15" Height="30" Width="200" Background="DarkBlue" HorizontalAlignment="Right"/>
+                </StackPanel>
+
+                
+            </StackPanel>
+
+            <StackPanel Width="400">
+                <StackPanel Orientation="Horizontal" x:Name="obrazyPanel" Height="150" Margin="10">
+
+                </StackPanel>
+
+                <Button Content="Zamawiam usługę" Margin="10, 100, 0, 0" Foreground="White" FontSize="15" Height="30" Width="200" Background="DarkBlue"/>
+            </StackPanel>
+        </StackPanel>
+        
+
+        
+    </StackPanel>
+</Window>
